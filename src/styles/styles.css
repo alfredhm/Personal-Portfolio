@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #44576D;
+  padding-top: 100px;
+}
+body .hidden {
+  transform: translateY(-100px);
+  box-shadow: none;
+}
+body header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  box-shadow: -7px -11px 17px 4px #29353c;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+body header .header-flex {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #44576D;
+  padding: 0px 50px;
+}
+body header .header-flex .logo {
+  width: 75px;
+  height: 75px;
+}
+body header .header-flex .logo:hover {
+  cursor: pointer;
+}
+body header .header-flex .links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+body header .header-flex .links .link {
+  display: inline-block;
+  margin: 10px 20px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+body header .header-flex .links .link:hover {
+  cursor: pointer;
+}
+body header .header-flex .links .link .link-details {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+body header .header-flex .links .link .link-details .link-title {
+  font-size: 18px;
+}
+body .spacer {
+  width: 100%;
+  height: 120px;
+}
+body main {
+  margin: 3% 30%;
+  height: 300vh;
+}
+body footer {
+  margin: 3%;
+  display: flex;
+  height: 15vh;
+}
+body footer .attributions {
+  border-radius: 50%;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+}/*# sourceMappingURL=styles.css.map */

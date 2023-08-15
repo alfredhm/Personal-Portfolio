@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$nav-height: 100px;
+
+body {
+    background-color: #44576D;
+    padding-top: $nav-height;
+
+    .hidden {
+        transform: translateY(calc(-1 * $nav-height));
+        box-shadow: none;
+    }
+
+    header {
+        height: $nav-height;
+        width: 100%;
+        position: fixed;
+        box-sizing: border-box;
+        box-shadow: -7px -11px 17px 4px #29353c;
+        top: 0;
+        left: 0;
+        transition: transform 0.2s;
+
+        .header-flex {
+            position: relative;
+            width: 100%;
+            height: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #44576D;
+            padding: 0px 50px;
+
+            .logo {
+                width: 75px;
+                height: 75px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .links {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
+
+                .link {
+                    display: inline-block;
+                    margin: 10px 20px;
+                    position: relative;
+                    text-decoration: none;
+                    color: white;
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .link-details {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+
+                        .link-title {
+                            font-size: 18px;
+                        }
+    
+                    }
+                }
+            }
+        } 
+    }
+    
+    .spacer {
+        width: 100%;
+        height: 120px;
+    }
+
+    main {
+        margin: 3% 30%;
+        height: 300vh;
+    }
+
+    footer {
+        margin: 3%;
+        display: flex;
+        height: 15vh;
+
+        .attributions {
+            border-radius: 50%;
+
+        }
+    }
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+}
