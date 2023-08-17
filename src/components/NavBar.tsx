@@ -15,7 +15,7 @@ const NavBar = () => {
         />
         <ol className="links">
           <li>
-            <a className="link">
+            <a href="#" className="link">
               <div className="link-details">
                 <img className="icon" src={AboutIcon} />
                 <span id="link-title">About</span>
@@ -23,7 +23,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="link">
+            <a href="#experience" className="link">
               <div className="link-details">
                 <img className="icon" src={ExperienceIcon} />
                 <span id="link-title">Experience</span>
@@ -31,7 +31,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="link">
+            <a href="#projects" className="link">
               <div className="link-details">
                 <img className="icon" src={ProjectsIcon} />
                 <span id="link-title">Projects</span>
@@ -39,7 +39,7 @@ const NavBar = () => {
             </a>
           </li>
           <li>
-            <a className="link">
+            <a href="#contact" className="link">
               <div className="link-details">
                 <img className="icon" src={ContactIcon} />
                 <span id="link-title">Contact</span>

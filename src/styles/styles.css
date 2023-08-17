@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 body {
-  background-color: #44576D;
+  background-color: #44576D !important;
   padding-top: 100px;
 }
 body .hidden {
@@ -29,6 +26,11 @@ body header .header-flex {
   background-color: #44576D;
   padding: 0px 50px;
 }
+@media (max-width: 1400px) {
+  body header .header-flex {
+    padding: 0px 20px;
+  }
+}
 body header .header-flex .logo {
   width: 75px;
   height: 75px;
@@ -45,6 +47,7 @@ body header .header-flex .links {
 }
 body header .header-flex .links .link {
   display: inline-block;
+  width: 100%;
   margin: 10px 20px;
   position: relative;
   text-decoration: none;
@@ -66,8 +69,53 @@ body .spacer {
   height: 120px;
 }
 body main {
-  margin: 3% 30%;
-  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin: 5rem 40rem;
+}
+@media (max-width: 2400px) {
+  body main {
+    margin: 5rem 30rem;
+  }
+}
+@media (max-width: 1800px) {
+  body main {
+    margin: 5rem 25rem;
+  }
+}
+@media (max-width: 1650px) {
+  body main {
+    margin: 5rem 20rem;
+  }
+}
+@media (max-width: 1400px) {
+  body main {
+    margin: 5rem 15rem;
+  }
+}
+@media (max-width: 1000px) {
+  body main {
+    margin: 5rem 10rem;
+  }
+}
+@media (max-width: 750px) {
+  body main {
+    margin: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  body main {
+    margin: 3rem;
+  }
+}
+@media (max-width: 350px) {
+  body main {
+    margin: 2rem;
+  }
+}
+body main section {
+  scroll-margin-top: 100px;
 }
 body footer {
   margin: 3%;
@@ -77,9 +125,12 @@ body footer {
 body footer .attributions {
   border-radius: 50%;
 }
+body footer #collapseExample {
+  color: #29353c;
+}
 
 .icon {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-right: 8px;
 }/*# sourceMappingURL=styles.css.map */

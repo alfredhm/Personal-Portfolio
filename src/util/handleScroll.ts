@@ -1,5 +1,5 @@
-// Enable hidden header
-{
+window.onload = function() {
+    // Enable hidden header
     const nav = document.querySelector<HTMLElement>('header');
     let lastScrollY = window.scrollY;
     window.addEventListener("scroll", () => {
@@ -14,10 +14,9 @@
             nav?.classList.remove("hidden")
         }
     }); 
-}
 
-// Change Text Color On Hover
-{
+
+    // Change Text Color On Hover
     const links = document.querySelectorAll('.link');
     links.forEach(link => {
         let text = link.querySelector<HTMLElement>('#link-title');
@@ -29,3 +28,7 @@
         })
     })
 }
+
+
+
+
