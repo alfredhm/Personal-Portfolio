@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onscroll = function() {
     // Enable hidden header
     const nav = document.querySelector<HTMLElement>('header');
     let lastScrollY = window.scrollY;
@@ -15,20 +15,4 @@ window.onload = function() {
         }
     }); 
 
-
-    // Change Text Color On Hover
-    const links = document.querySelectorAll('.link');
-    links.forEach(link => {
-        let text = link.querySelector<HTMLElement>('#link-title');
-        link.addEventListener('mouseover', () => {
-            if (text) text.style.color = '#AAC7D8';
-        })
-        link.addEventListener('mouseout', () => {
-            if (text) text.style.color = 'white';
-        })
-    })
 }
-
-
-
-

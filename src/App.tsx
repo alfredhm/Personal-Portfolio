@@ -11,8 +11,8 @@ function App() {
 
   return (
     <div>
-      {screenSize.width > 650 ? <NavBar /> : <NavMenu />}
-      <TestBody />
+      {screenSize.width > 850 ? <NavBar /> : <NavMenu />}
+      <TestBody iconSize={screenSize.width > 850 ? 25 : 18} />
       <Footer />
     </div>
   );

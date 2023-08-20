@@ -29,7 +29,7 @@ const NavMenu = () => {
             backgroundColor="#44576D"
             _focus={{ boxShadow: "none" }}
           >
-            <HiMenuAlt3 size={20} />
+            <HiMenuAlt3 size={30} />
           </MenuButton>
           <MenuList backgroundColor="#44576D" px={2}>
             <MenuItem
