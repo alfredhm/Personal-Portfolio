@@ -1,4 +1,4 @@
-import Projects from "./Projects";
+import Projects from "./projects/Projects";
 
 interface Props {
   iconSize: number;
