@@ -240,7 +240,6 @@ body main #projects .project-image-div a {
 }
 body main #projects .project-image-div .image-cover {
   border-radius: 5px;
-  background-color: #AAC7D8;
   z-index: 10;
   height: 400px;
   width: inherit;
@@ -318,7 +317,6 @@ body main #projects .project-image-div-flipped a {
 }
 body main #projects .project-image-div-flipped .image-cover {
   border-radius: 5px;
-  background-color: #AAC7D8;
   z-index: 10;
   height: 400px;
   width: inherit;

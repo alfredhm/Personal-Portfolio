@@ -54,7 +54,7 @@ const RightProject = ({
             style={
               hover
                 ? { backgroundColor: "transparent", cursor: "pointer" }
-                : { backgroundColor: "#AAC7D8", opacity: "70%" }
+                : { backgroundColor: "black", opacity: "40%" }
             }
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
