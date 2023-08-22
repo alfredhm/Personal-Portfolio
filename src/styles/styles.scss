@@ -22,6 +22,26 @@ body {
         }
     }
 
+    @keyframes shadowout {
+        from {
+            box-shadow: -7px -11px 17px 4px #29353c;
+        }
+
+        to {
+            box-shadow: none;
+        }
+    }
+
+    .shadow-out {
+        animation-duration: 1s;
+        animation-name: shadowout;
+        animation-iteration-count: 1;
+    }
+
+    .no-shadow {
+        box-shadow: none;
+    }
+
     header {
         height: $nav-height;
         width: 100%;
@@ -117,6 +137,7 @@ body {
         flex-direction: column;
         margin: 5rem 45rem;
         align-items: center;
+        gap: 300px;
 
         @media (max-width: 2400px) {
             margin: 5rem 30rem;
@@ -132,6 +153,7 @@ body {
         }
         @media (max-width: 1000px) {
             margin: 5rem 10rem;
+            gap: 150px;
         }
         @media (max-width: 750px) {
             margin: 5rem;
@@ -155,11 +177,171 @@ body {
             align-items: center;
 
             hr {
-                width: 25%;
+                width: 250px;
                 border-top-width: 3px;
                 margin-left: 10px;
                 border-color: white;
                 opacity: .55;
+            }
+        }
+
+        #experience {
+            width: 100%;
+            max-width: 1000px;
+
+            
+                
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+
+            .experience-div {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+            }
+
+            .experience-list-div {
+                width: 30%;
+
+                @media (max-width: 1050px) {
+                    width: 20%;
+                }
+
+                @media (max-width: 900px) {
+                    width: 25%;
+                }
+
+            }
+
+            .experience-description-div {
+                width: 70%;
+
+                
+                @media (max-width: 1050px) {
+                    width: 80%;
+                }
+
+                h3 {
+                    margin-bottom: 0.25rem;
+
+                    @media (max-width: 1050px) {
+                        font-size: calc(0.8rem + .6vw);
+                    }
+                }
+
+                .shy-text {
+                    font-size: 13px;
+                    font-weight: 400;
+
+                    
+                    @media (max-width: 1050px) {
+                        font-size: 10px;
+                    }
+                }
+
+                .job-points-list {
+                    padding: 0px;
+                    padding-left: 10px;
+                    list-style: none;
+
+                    
+                    @media (max-width: 1050px) {
+                        font-size: 12px;
+                    }
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        ::before {
+                            content: "»"!important;
+                        }
+
+                        p {
+                            display: flex;
+                            gap: 5px;
+                        }
+                        
+                    }
+                }
+            }
+
+            .tech-list-mobile {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                padding: 25px 0px;
+
+                .job {
+                    padding: 5px 10px;
+                    font-weight: 600;
+                    display: flex;
+                    font-size: 18px;
+                    align-items: center;
+                    border-bottom: 3px solid white;
+                    width: fit-content;
+                    color: #93a9c0;
+
+                    &:hover {
+                        background-color: #5a7594;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                p {
+                    margin: 0px;
+                    margin-bottom: 0.3rem;
+                    padding-left: 5px;
+                }
+
+                .ghost {
+                    width: 15%;
+                    padding: 15px;
+                    border-bottom: 3px solid gray;
+                }
+
+            }
+            
+
+            .tech-list {
+                list-style: none;
+
+                .job {
+                    padding: 5px 10px;
+                    padding-right: 5%;
+                    font-weight: 600;
+                    display: flex;
+                    border-left: 3px solid white;
+                    font-size: 18px;
+                    align-items: center;
+                    width: fit-content;
+                    color: #93a9c0;
+
+                    &:hover {
+                        background-color: #5a7594;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+                p {
+                    margin: 0px;
+                    margin-bottom: 0.3rem;
+                    padding-left: 5px;
+                }
+
+                .ghost {
+                    padding: 15px;
+                    height: 50px;
+                    border-left: 3px solid gray;
+                }
             }
         }
 
@@ -170,7 +352,7 @@ body {
             align-items: center;
             gap: 50px;
             margin: 20px 0px;
-            max-width: 1000px;
+            max-width: 1050px;
             height: fit-content;
 
             @media (max-width: 1000px) {
@@ -500,7 +682,7 @@ body {
                         box-shadow: 5px 5px 20px 5px #3d4f64;
                         z-index: 20;
 
-                        @media (max-width: 1200px) {
+                        @media (max-width: 1300px) {
                             height: 90px;
                         }
 
@@ -544,7 +726,7 @@ body {
                         box-shadow: 5px 5px 20px 5px #3d4f64;
                         z-index: 20;
 
-                        @media (max-width: 1200px) {
+                        @media (max-width: 1300px) {
                             height: 90px;
                         }
                         @media (max-width: 650px) {
@@ -621,12 +803,12 @@ body {
     }
 
     footer {
-        margin: 3%;
+        margin: 3% 5%;
         display: flex;
-        height: 15vh;
 
         .attributions {
             border-radius: 50%;
+            font-size: 25px;
 
         }
 

@@ -1,4 +1,4 @@
-window.onscroll = function() {
+window.onload = function() {
     // Enable hidden header
     const nav = document.querySelector<HTMLElement>('header');
     let lastScrollY = window.scrollY;
@@ -8,6 +8,14 @@ window.onscroll = function() {
             nav?.classList.add("hidden")
         } else {
             nav?.classList.remove("hidden")
+        }
+
+        if (window.scrollY === 0) {
+            nav?.classList.add("shadow-out")
+            nav?.classList.add("no-shadow")
+        } else {
+            nav?.classList.remove("shadow-out")
+            nav?.classList.remove("no-shadow")
         }
         lastScrollY = window.scrollY;
         if (window.scrollY <= 0) {

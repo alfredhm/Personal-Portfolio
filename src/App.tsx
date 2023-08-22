@@ -12,7 +12,10 @@ function App() {
   return (
     <div>
       {screenSize.width > 850 ? <NavBar /> : <NavMenu />}
-      <TestBody iconSize={screenSize.width > 850 ? 25 : 18} />
+      <TestBody
+        screenWidth={screenSize.width}
+        iconSize={screenSize.width > 850 ? 25 : 18}
+      />
       <Footer />
     </div>
   );
