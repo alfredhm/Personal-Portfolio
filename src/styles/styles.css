@@ -2,6 +2,7 @@
 body {
   background-color: #44576D !important;
   padding-top: 100px;
+  color: white;
 }
 @media (max-width: 700px) {
   body {
