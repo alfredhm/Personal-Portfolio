@@ -20,6 +20,7 @@ const About = () => {
       }
     };
     setTimeout(setCover, 1);
+    setTimeout(setCover, 1);
   });
 
   return (
