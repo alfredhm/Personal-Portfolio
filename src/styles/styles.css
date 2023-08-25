@@ -416,7 +416,12 @@ body main #projects .project-image-div .image-cover {
 }
 @media (max-width: 1750px) {
   body main #projects .project-image-div .image-cover {
-    height: 320px;
+    max-height: 320px;
+  }
+}
+@media (max-width: 350px) {
+  body main #projects .project-image-div .image-cover {
+    max-height: 240px;
   }
 }
 @media (max-width: 930px) {
