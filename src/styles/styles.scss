@@ -1324,13 +1324,25 @@ body {
     #home {
         width: 100%;
         text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
 
+        @media (max-width: 475px) {
+            height: 80vh;
+        }
+        
         .home-div {
             width: 100%;
             border: 2px solid #AAC7D8;
             border-radius: 5px;
             background-color: #566f8b;
             padding: 30% 0px;
+
+            @media (max-width: 600px) {
+                margin-top: 50%;
+            }
+
 
             h1 {
                 font-size: 120px;

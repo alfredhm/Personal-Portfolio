@@ -1310,6 +1310,14 @@ body #about .me-cover:hover {
 body #home {
   width: 100%;
   text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 475px) {
+  body #home {
+    height: 80vh;
+  }
 }
 body #home .home-div {
   width: 100%;
@@ -1317,6 +1325,11 @@ body #home .home-div {
   border-radius: 5px;
   background-color: #566f8b;
   padding: 30% 0px;
+}
+@media (max-width: 600px) {
+  body #home .home-div {
+    margin-top: 50%;
+  }
 }
 body #home .home-div h1 {
   font-size: 120px;
