@@ -469,6 +469,7 @@ body {
                     grid-row-start: 1;
                     grid-row-end: 2;
                     display: grid;
+                    max-height: 400px;
 
                     @media (max-width: 1750px) {
                         height: $project-height-md;
@@ -544,6 +545,7 @@ body {
                     grid-row-start: 1;
                     grid-row-end: 2;
                     display: grid;
+                    max-height: 400px;
 
                     
                     @media (max-width: 1750px) {

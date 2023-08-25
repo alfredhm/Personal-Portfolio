@@ -433,6 +433,7 @@ body main #projects .project-image-div img {
   grid-row-start: 1;
   grid-row-end: 2;
   display: grid;
+  max-height: 400px;
 }
 @media (max-width: 1750px) {
   body main #projects .project-image-div img {
@@ -510,6 +511,7 @@ body main #projects .project-image-div-flipped img {
   grid-row-start: 1;
   grid-row-end: 2;
   display: grid;
+  max-height: 400px;
 }
 @media (max-width: 1750px) {
   body main #projects .project-image-div-flipped img {
