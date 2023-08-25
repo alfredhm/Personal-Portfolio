@@ -372,14 +372,9 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 50px;
             margin: 20px 0px;
             max-width: 1050px;
-            height: fit-content;
-
-            @media (max-width: 1000px) {
-                gap: 25px;
-            }
+            height: 100%;
 
             .project-div-left { 
                 height: $project-height;
@@ -408,6 +403,9 @@ body {
                 justify-items: flex-end;
                 align-items: center;
 
+                @media (max-width: 930px) {
+                    margin-top: 20px;
+                }
                 
                 @media (max-width: 475px) {
                     height: $project-height-sm;

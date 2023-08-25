@@ -341,16 +341,9 @@ body main #projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
   margin: 20px 0px;
   max-width: 1050px;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-@media (max-width: 1000px) {
-  body main #projects {
-    gap: 25px;
-  }
+  height: 100%;
 }
 body main #projects .project-div-left {
   height: 400px;
@@ -376,6 +369,11 @@ body main #projects .project-div-right {
   border-radius: 5px;
   justify-items: flex-end;
   align-items: center;
+}
+@media (max-width: 930px) {
+  body main #projects .project-div-right {
+    margin-top: 20px;
+  }
 }
 @media (max-width: 475px) {
   body main #projects .project-div-right {
