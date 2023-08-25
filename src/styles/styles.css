@@ -357,6 +357,11 @@ body main #projects .project-div-left {
   align-items: center;
   max-height: 400px;
 }
+@media (max-width: 930px) {
+  body main #projects .project-div-left {
+    max-width: 450px;
+  }
+}
 body main #projects .project-div-right {
   height: -moz-fit-content;
   height: fit-content;
@@ -368,11 +373,11 @@ body main #projects .project-div-right {
   justify-items: flex-end;
   align-items: center;
   max-height: 400px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 @media (max-width: 930px) {
   body main #projects .project-div-right {
-    margin-top: 20px;
+    max-width: 450px;
   }
 }
 body main #projects .project-image-div {
@@ -1090,7 +1095,7 @@ body #contact form input, body #contact form textarea {
   background-color: #AAC7D8;
   border-radius: 10px;
   padding: 0px 10px;
-  border: 5px solid #566f8b;
+  border: 3px solid #566f8b;
   min-height: 50px;
 }
 body #contact form textarea {
