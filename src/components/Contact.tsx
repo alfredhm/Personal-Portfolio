@@ -4,7 +4,7 @@ import { AiOutlineFileText } from "react-icons/ai";
 
 import emailjs from "@emailjs/browser";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const service_id = "service_75yy2yc";
 const template_id = "template_amz5h4s";
