@@ -1316,7 +1316,7 @@ body #home {
 }
 @media (max-width: 475px) {
   body #home {
-    height: 80vh;
+    height: 85vh;
   }
 }
 body #home .home-div {
@@ -1325,10 +1325,34 @@ body #home .home-div {
   border-radius: 5px;
   background-color: #566f8b;
   padding: 30% 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50%;
 }
 @media (max-width: 600px) {
   body #home .home-div {
-    margin-top: 50%;
+    margin-top: 20%;
+  }
+}
+@media (max-width: 500px) {
+  body #home .home-div {
+    margin-top: 40%;
+  }
+}
+@media (max-width: 450px) {
+  body #home .home-div {
+    margin-top: 35%;
+  }
+}
+@media (max-width: 375px) {
+  body #home .home-div {
+    margin-top: 30%;
+  }
+}
+@media (max-width: 325px) {
+  body #home .home-div {
+    margin-top: 75%;
   }
 }
 body #home .home-div h1 {
