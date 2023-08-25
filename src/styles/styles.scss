@@ -377,7 +377,7 @@ body {
             height: 100%;
 
             .project-div-left { 
-                height: $project-height;
+                height: fit-content;
                 width: 100%;
                 display: grid;
                 grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -385,16 +385,11 @@ body {
                 border-radius: 5px;
                 justify-items: flex-start;
                 align-items: center;
-
-                @media (max-width: 475px) {
-                    height: $project-height-sm;
-                }
-
  
             }
 
             .project-div-right { 
-                height: $project-height;
+                height: fit-content;
                 width: 100%;
                 display: grid;
                 grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;

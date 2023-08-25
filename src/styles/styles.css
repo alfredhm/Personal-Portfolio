@@ -346,7 +346,8 @@ body main #projects {
   height: 100%;
 }
 body main #projects .project-div-left {
-  height: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -355,13 +356,9 @@ body main #projects .project-div-left {
   justify-items: flex-start;
   align-items: center;
 }
-@media (max-width: 475px) {
-  body main #projects .project-div-left {
-    height: 240px;
-  }
-}
 body main #projects .project-div-right {
-  height: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
