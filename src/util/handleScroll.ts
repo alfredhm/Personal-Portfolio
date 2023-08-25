@@ -1,4 +1,4 @@
-window.onload = function() {
+export default function handleScroll() {
     // Enable hidden header
     const nav = document.querySelector<HTMLElement>('header');
     if (window.scrollY === 0) {
@@ -28,7 +28,6 @@ window.onload = function() {
     })
     
     window.addEventListener("touchmove", () => {
-        console.log(lastScrollY, window.scrollY)
         if (lastScrollY < window.scrollY) {
             nav?.classList.add("hidden")
         } else {

@@ -5,12 +5,18 @@ import Footer from "./components/Footer";
 import TestBody from "./components/TestBody";
 import NavMenu from "./components/NavMenu";
 import useScreenSize from "./util/handleResize";
+import handleScroll from "./util/handleScroll";
+import { useEffect } from "react";
 
 function App() {
   const screenSize = useScreenSize();
 
+  useEffect(() => {
+    handleScroll();
+  }, []);
+
   return (
-    <div>
+    <div onScroll={handleScroll} onTouchMove={handleScroll}>
       {screenSize.width > 850 ? <NavBar /> : <NavMenu />}
       <TestBody
         screenWidth={screenSize.width}
