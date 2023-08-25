@@ -2,7 +2,7 @@ import "./styles/styles.css";
 import "./util/handleScroll";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import TestBody from "./components/TestBody";
+import Body from "./components/Body";
 import NavMenu from "./components/NavMenu";
 import useScreenSize from "./util/handleResize";
 import handleScroll from "./util/handleScroll";
@@ -18,7 +18,7 @@ function App() {
   return (
     <div onScroll={handleScroll} onTouchMove={handleScroll}>
       {screenSize.width > 850 ? <NavBar /> : <NavMenu />}
-      <TestBody
+      <Body
         screenWidth={screenSize.width}
         iconSize={screenSize.width > 850 ? 25 : 18}
       />

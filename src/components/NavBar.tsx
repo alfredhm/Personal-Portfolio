@@ -8,14 +8,12 @@ const NavBar = () => {
   return (
     <header>
       <nav className="header-flex">
-        <img
-          onClick={() => location.reload()}
-          className="logo"
-          src={LogoIcon}
-        />
+        <a href="#" className="link">
+          <img className="logo" src={LogoIcon}></img>
+        </a>
         <ol className="links">
           <li>
-            <a href="#" className="link">
+            <a href="#about" className="link">
               <div className="link-details">
                 <img className="icon" src={AboutIcon} />
                 <span id="link-title">About</span>

@@ -18,11 +18,9 @@ const NavMenu = () => {
   return (
     <header>
       <nav className="header-flex">
-        <img
-          onClick={() => location.reload()}
-          className="logo"
-          src={LogoIcon}
-        />
+        <a href="#" className="link">
+          <img className="logo" src={LogoIcon}></img>
+        </a>
         <Menu>
           <MenuButton
             as={Button}
@@ -34,7 +32,7 @@ const NavMenu = () => {
           <MenuList backgroundColor="#44576D" px={2}>
             <MenuItem
               as={Link}
-              href="#"
+              href="#about"
               _focus={{ boxShadow: "none", backgroundColor: "#5c7491" }}
               backgroundColor="#44576D"
               borderRadius={5}

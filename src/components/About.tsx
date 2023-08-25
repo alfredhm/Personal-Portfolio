@@ -53,8 +53,35 @@ const About = () => {
             am hungry for growth and new opportunities. The prospect of
             contributing my skills to meaningful projects while continuously
             learning and improving is what drives me forward. Your interest in
-            my portfolio is deeply appreciated.{" "}
+            my portfolio is deeply appreciated.
           </p>
+          <div>
+            <p>Here are the main tools I've been using recently:</p>
+            <div className="about-tech-flex">
+              <ul className="job-points-list">
+                <li>
+                  <p>ReactJS</p>
+                </li>
+                <li>
+                  <p>NodeJS</p>
+                </li>
+                <li>
+                  <p>Typescript</p>
+                </li>
+              </ul>
+              <ul className="job-points-list">
+                <li>
+                  <p>HTML & CSS</p>
+                </li>
+                <li>
+                  <p>MongoDB</p>
+                </li>
+                <li>
+                  <p>Express</p>
+                </li>
+              </ul>
+            </div>
+          </div>
           <p>
             Thank you for considering my work – I can't wait to see where this
             journey takes me next!
