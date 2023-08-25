@@ -8,7 +8,7 @@ $project-height-sm: 240px;
 body {
     background-color: #44576D!important;
     padding-top: $nav-height;
-    color: white;
+    color: white!important;
 
     @media (max-width: 700px) {
         padding-top: $nav-height-sm;
