@@ -368,6 +368,7 @@ body main #projects .project-div-right {
   justify-items: flex-end;
   align-items: center;
   max-height: 400px;
+  margin-top: 50px;
 }
 @media (max-width: 930px) {
   body main #projects .project-div-right {
