@@ -372,7 +372,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px 0px;
+            margin: 30px 0px;
             max-width: 1050px;
             height: 100%;
 
@@ -472,11 +472,11 @@ body {
                     max-height: 400px;
 
                     @media (max-width: 1750px) {
-                        height: $project-height-md;
+                        max-height: $project-height-md;
                     }
                     
                     @media (max-width: 350px) {
-                        height: $project-height-sm;
+                        max-height: $project-height-sm;
                     }
 
                     @media (max-width: 930px) {
@@ -549,12 +549,12 @@ body {
 
                     
                     @media (max-width: 1750px) {
-                        height: $project-height-md;
+                        max-height: $project-height-md;
                     }
 
                     
                     @media (max-width: 350px) {
-                        height: $project-height-sm;
+                        max-height: $project-height-sm;
                     }
 
                     @media (max-width: 930px) {
