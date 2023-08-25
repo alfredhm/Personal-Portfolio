@@ -45,9 +45,9 @@ body header {
   transition: transform 0.2s;
   z-index: 30;
 }
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   body header {
-    height: 75px;
+    height: 50px;
   }
 }
 body header .header-flex {
@@ -74,8 +74,8 @@ body header .header-flex .logo:hover {
 }
 @media (max-width: 930px) {
   body header .header-flex .logo {
-    width: 55px;
-    height: 55px;
+    width: 35px;
+    height: 35px;
   }
 }
 body header .header-flex li :hover {

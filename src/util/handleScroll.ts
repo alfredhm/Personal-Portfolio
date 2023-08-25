@@ -25,6 +25,27 @@ window.onload = function() {
         if (window.scrollY <= 0) {
             nav?.classList.remove("hidden")
         }
+    })
+    
+    window.addEventListener("touchmove", () => {
+        console.log(lastScrollY, window.scrollY)
+        if (lastScrollY < window.scrollY) {
+            nav?.classList.add("hidden")
+        } else {
+            nav?.classList.remove("hidden")
+        }
+
+        if (window.scrollY === 0) {
+            nav?.classList.add("shadow-out")
+            nav?.classList.add("no-shadow")
+        } else {
+            nav?.classList.remove("shadow-out")
+            nav?.classList.remove("no-shadow")
+        }
+        lastScrollY = window.scrollY;
+        if (window.scrollY <= 0) {
+            nav?.classList.remove("hidden")
+        }
     }); 
 
 }
