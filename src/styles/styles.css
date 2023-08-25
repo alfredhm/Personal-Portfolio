@@ -416,6 +416,17 @@ body main #projects .project-image-div .image-cover {
 }
 @media (max-width: 1750px) {
   body main #projects .project-image-div .image-cover {
+    height: 320px;
+  }
+}
+@media (max-width: 930px) {
+  body main #projects .project-image-div .image-cover {
+    background-color: transparent;
+    height: auto;
+  }
+}
+@media (max-width: 1750px) {
+  body main #projects .project-image-div .image-cover {
     max-height: 320px;
   }
 }
@@ -500,6 +511,22 @@ body main #projects .project-image-div-flipped .image-cover {
 @media (max-width: 1750px) {
   body main #projects .project-image-div-flipped .image-cover {
     height: 320px;
+  }
+}
+@media (max-width: 930px) {
+  body main #projects .project-image-div-flipped .image-cover {
+    background-color: transparent;
+    height: auto;
+  }
+}
+@media (max-width: 1750px) {
+  body main #projects .project-image-div-flipped .image-cover {
+    max-height: 320px;
+  }
+}
+@media (max-width: 350px) {
+  body main #projects .project-image-div-flipped .image-cover {
+    max-height: 240px;
   }
 }
 @media (max-width: 930px) {

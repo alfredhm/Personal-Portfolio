@@ -447,7 +447,14 @@ body {
                     z-index: 10;
                     height: $project-height;
                     width: inherit;
-
+                    @media (max-width: 1750px) {
+                        height: $project-height-md;
+                    }
+                    
+                    @media (max-width: 930px) {
+                        background-color: transparent;
+                        height: auto;
+                    }
                     
                     @media (max-width: 1750px) {
                         max-height: $project-height-md;
@@ -535,6 +542,20 @@ body {
                         height: $project-height-md;
                     }
                     
+                    @media (max-width: 930px) {
+                        background-color: transparent;
+                        height: auto;
+                    }
+                    
+                    @media (max-width: 1750px) {
+                        max-height: $project-height-md;
+                    }
+                    
+                    @media (max-width: 350px) {
+                        max-height: $project-height-sm;
+                    }
+                    
+
                     @media (max-width: 930px) {
                         background-color: transparent;
                         height: auto;
