@@ -12,7 +12,6 @@ const About = () => {
         ?.getBoundingClientRect();
       const height = imageDiv?.height;
       const width = imageDiv?.width;
-      console.log(imageDiv);
 
       if (imageDiv) {
         await setWidth(width);

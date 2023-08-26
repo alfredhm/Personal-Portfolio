@@ -1,6 +1,17 @@
 import AboutIcon from "../assets/about.png";
 import ContactIcon from "../assets/contact.png";
-import { AiOutlineFileText } from "react-icons/ai";
+import {
+  AiOutlineFileText,
+  AiOutlineArrowRight,
+  AiOutlineCheck,
+} from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
+
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import { Oval } from "react-loader-spinner";
 
 import emailjs from "@emailjs/browser";
 
@@ -15,36 +26,66 @@ interface Props {
   screenWidth: number;
 }
 
+const schema = z.object({
+  name: z
+    .string()
+    .min(2, { message: "too short" })
+    .max(30, { message: "too long" }),
+  email: z
+    .string()
+    .email({ message: "bad email" })
+    .max(50, { message: "too long" }),
+  body: z.string().min(10, { message: "too short" }),
+});
+
+type FormData = z.infer<typeof schema>;
+
 const Contact = ({ iconSize, screenWidth }: Props) => {
   const form = useRef<HTMLFormElement>(null!);
-  const [cover, setCover] = useState(false);
-  const [message, setMessage] = useState("");
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    form.current.focus(); //Object is possibly 'null'
-  }, [cover]);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
+  const handleSend = (e: any) => {
+    console.log(e);
+    setLoading(true);
     emailjs.sendForm(service_id, template_id, form.current, public_key).then(
-      async (result) => {
+      (result) => {
         console.log(result.text);
-        await setMessage("E-Mail Successfully Sent!");
+        setLoading(false);
+        setSent(true);
+        setTimeout(() => setSent(false), 3000);
       },
-      async (error) => {
+      (error) => {
         console.log(error.text);
-        await setMessage("Error Sending E-Mail");
+        setLoading(false);
+        setError(true);
+        setTimeout(() => setError(false), 3000);
       }
     );
-    e.target.reset();
-    setCover(true);
   };
 
-  const handleClose = () => {
-    const cover = document.querySelector<HTMLDivElement>(".contact-cover");
-    if (cover) cover.style.display = "none";
-    setCover(false);
+  const handleResize = (e: any) => {
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+    e.target.style.paddingBottom = "0.7rem";
+    const height = parseInt(
+      e.target.style.height.slice(0, e.target.style.height.length - 2)
+    );
+    document.querySelector("body")?.addEventListener("click", () => {
+      if (height < 71) {
+        e.target.style.height = "3rem";
+      } else {
+        e.target.style.height = `${height}px`;
+      }
+    });
   };
 
   return (
@@ -55,35 +96,47 @@ const Contact = ({ iconSize, screenWidth }: Props) => {
       </div>
       <hr></hr>
       <div className="container">
-        {cover && (
-          <div className="contact-cover">
-            <div>
-              <p
-                style={{
-                  fontWeight: "bold",
-                  fontSize: "25px",
-                  textAlign: "center",
-                }}
-              >
-                {message}
-              </p>
-            </div>
-            <button onClick={() => handleClose()} className="close-button">
-              Okay
-            </button>
-          </div>
-        )}
-        <form ref={form} onSubmit={handleSubmit}>
+        <form
+          ref={form}
+          onSubmit={handleSubmit((data) => {
+            handleSend(form);
+            reset();
+          })}
+        >
           <div className="contact-flex">
-            {screenWidth > 700 && <img className="icon" src={AboutIcon} />}
-            <input type="text" name="user_name" placeholder="Name"></input>
-          </div>
-          <div className="contact-flex">
-            {screenWidth > 700 && <img className="icon" src={ContactIcon} />}
-            <input type="email" name="user_email" placeholder="E-Mail"></input>
+            {screenWidth > 400 && <img className="icon" src={AboutIcon} />}
+            <input
+              {...register("name")}
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Name"
+              style={
+                errors.name && {
+                  borderColor: "indianred",
+                  borderBottomWidth: "1px",
+                }
+              }
+            />
           </div>
           <div className="contact-flex">
-            {screenWidth > 700 && (
+            {screenWidth > 400 && <img className="icon" src={ContactIcon} />}
+            <input
+              {...register("email")}
+              id="email"
+              type="email"
+              name="email"
+              placeholder="E-Mail"
+              style={
+                errors.email && {
+                  borderColor: "indianred",
+                  borderBottomWidth: "1px",
+                }
+              }
+            />
+          </div>
+          <div className="contact-flex">
+            {screenWidth > 400 && (
               <AiOutlineFileText
                 size={iconSize}
                 style={{ color: "#aac7d8", marginRight: "8px" }}
@@ -91,13 +144,48 @@ const Contact = ({ iconSize, screenWidth }: Props) => {
               />
             )}
             <textarea
-              name="message"
+              {...register("body")}
+              id="body"
+              name="body"
               className="input-body"
               placeholder="Body"
-            ></textarea>
+              onInput={handleResize}
+              style={
+                errors.body && {
+                  borderColor: "indianred",
+                  borderBottomWidth: "1px",
+                }
+              }
+            />
           </div>
-          <div className="submit-div">
-            <input type="submit" className="send-email" value="Send"></input>
+          <div className="flex-center">
+            <button type="submit" className="submit-div">
+              <p className="send-email">Send</p>
+              <AiOutlineArrowRight
+                size={iconSize - 5}
+                style={{
+                  color: "#aac7d8",
+                  marginLeft: "4px",
+                  marginBottom: "2px",
+                }}
+              />
+            </button>
+            <div className="loader-container">
+              {isLoading ? (
+                <Oval
+                  height={30}
+                  width={30}
+                  color="#AAC7D8"
+                  secondaryColor="#AAC7D8"
+                />
+              ) : sent ? (
+                <AiOutlineCheck size={iconSize} style={{ color: "#aac7d8" }} />
+              ) : error ? (
+                <RxCross1 size={iconSize} style={{ color: "#aac7d8" }} />
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </form>
       </div>
