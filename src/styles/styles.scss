@@ -1412,6 +1412,7 @@ body {
     footer {
         margin: 3% 5%;
         display: flex;
+        flex-direction: column-reverse;
 
         .attributions {
             border-radius: 50%;
@@ -1419,8 +1420,45 @@ body {
 
         }
 
+        .copyright {
+            margin: 0px;
+        }
+
         #collapseExample {
             color: #29353c;
+        }
+
+        .built-div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 15px;
+                font-weight: bold;
+                color:#97a5ad;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                width: 200px;
+                justify-content: center;
+                padding: 0px;
+                margin-left: 15px;
+
+                li {
+                    margin-right: 15px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color:#97a5ad;
+                    }
+                }
+            }
         }
     }
 }

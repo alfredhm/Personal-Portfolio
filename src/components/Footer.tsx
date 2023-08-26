@@ -1,8 +1,11 @@
+import { RiGithubLine } from "react-icons/ri";
+import { AiOutlineYoutube, AiOutlineLinkedin } from "react-icons/ai";
+
 const Footer = () => {
   return (
     <footer>
       <div>
-        <p>
+        <p className="copyright">
           <button
             className="box-border w-4 h-4 attributions"
             type="button"
@@ -42,6 +45,32 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="built-div">
+        <p>Built by Alfred Morgan</p>
+        <ul>
+          <li>
+            <a target="_blank" href="https://github.com/alfredhm">
+              <RiGithubLine size={20} />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCHxo0vzb1CyJt1u7tIbkYbQ"
+            >
+              <AiOutlineYoutube size={20} />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/alfred-morgan-541372247/"
+            >
+              <AiOutlineLinkedin size={20} />
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

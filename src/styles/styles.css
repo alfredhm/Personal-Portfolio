@@ -1407,13 +1407,45 @@ body #home .home-div h2 {
 body footer {
   margin: 3% 5%;
   display: flex;
+  flex-direction: column-reverse;
 }
 body footer .attributions {
   border-radius: 50%;
   font-size: 25px;
 }
+body footer .copyright {
+  margin: 0px;
+}
 body footer #collapseExample {
   color: #29353c;
+}
+body footer .built-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body footer .built-div p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #97a5ad;
+}
+body footer .built-div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: center;
+  padding: 0px;
+  margin-left: 15px;
+}
+body footer .built-div ul li {
+  margin-right: 15px;
+}
+body footer .built-div ul li:hover {
+  cursor: pointer;
+  color: #97a5ad;
 }
 
 .icon {
