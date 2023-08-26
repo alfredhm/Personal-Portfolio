@@ -165,12 +165,18 @@ body {
             margin: 5rem;
             gap: 100px;
         }
+        @media (max-width: 600px) {
+            margin-top: 0px;
+            gap: 100px;
+        }
         @media (max-width: 540px) {
             margin: 3rem;
+            margin-top: 0px;
             gap: 75px;
         }
         @media (max-width: 450px) {
             margin: 0.5rem;
+            margin-top: 0px;
             gap: 50px;
         }
 
@@ -1327,10 +1333,6 @@ body {
         height: 100vh;
         display: flex;
         flex-direction: column;
-
-        @media (max-width: 475px) {
-            height: 85vh;
-        }
         
         .home-div {
             width: 100%;
@@ -1344,23 +1346,7 @@ body {
             height: 50%;
 
             @media (max-width: 600px) {
-                margin-top: 20%;
-            }
-
-            @media (max-width: 500px) {
-                margin-top: 40%;
-            }
-
-            @media (max-width: 450px) {
-                margin-top: 35%;
-            }
-
-            @media (max-width: 375px) {
-                margin-top: 30%;
-            }
-
-            @media (max-width: 325px) {
-                margin-top: 75%;
+                height: 90%;
             }
 
 

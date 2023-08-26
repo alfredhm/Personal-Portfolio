@@ -154,15 +154,23 @@ body main {
     gap: 100px;
   }
 }
+@media (max-width: 600px) {
+  body main {
+    margin-top: 0px;
+    gap: 100px;
+  }
+}
 @media (max-width: 540px) {
   body main {
     margin: 3rem;
+    margin-top: 0px;
     gap: 75px;
   }
 }
 @media (max-width: 450px) {
   body main {
     margin: 0.5rem;
+    margin-top: 0px;
     gap: 50px;
   }
 }
@@ -1314,11 +1322,6 @@ body #home {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 475px) {
-  body #home {
-    height: 85vh;
-  }
-}
 body #home .home-div {
   width: 100%;
   border: 2px solid #AAC7D8;
@@ -1332,27 +1335,7 @@ body #home .home-div {
 }
 @media (max-width: 600px) {
   body #home .home-div {
-    margin-top: 20%;
-  }
-}
-@media (max-width: 500px) {
-  body #home .home-div {
-    margin-top: 40%;
-  }
-}
-@media (max-width: 450px) {
-  body #home .home-div {
-    margin-top: 35%;
-  }
-}
-@media (max-width: 375px) {
-  body #home .home-div {
-    margin-top: 30%;
-  }
-}
-@media (max-width: 325px) {
-  body #home .home-div {
-    margin-top: 75%;
+    height: 90%;
   }
 }
 body #home .home-div h1 {
