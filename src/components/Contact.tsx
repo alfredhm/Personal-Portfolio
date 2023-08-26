@@ -15,7 +15,7 @@ import { Oval } from "react-loader-spinner";
 
 import emailjs from "@emailjs/browser";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const service_id = "service_75yy2yc";
 const template_id = "template_amz5h4s";
@@ -98,7 +98,7 @@ const Contact = ({ iconSize, screenWidth }: Props) => {
       <div className="container">
         <form
           ref={form}
-          onSubmit={handleSubmit((data) => {
+          onSubmit={handleSubmit(() => {
             handleSend(form);
             reset();
           })}
