@@ -34,6 +34,8 @@ const Projects = ({ iconSize }: Props) => {
           description={weatherDescription}
           techlist={weatherTech}
           iconSize={iconSize}
+          href="https://alfredhm-weather.vercel.app/"
+          github="https://github.com/alfredhm/Weather"
         />
         <RightProject
           imageURL={SlitherAppImage}
@@ -41,6 +43,8 @@ const Projects = ({ iconSize }: Props) => {
           description={slitherDescription}
           techlist={slitherTech}
           iconSize={iconSize}
+          href="https://alfredhm.pythonanywhere.com/"
+          github="https://github.com/alfredhm/Slither"
         />
         <LeftProject
           imageURL={GameHubAppImage}
@@ -48,6 +52,8 @@ const Projects = ({ iconSize }: Props) => {
           description={gameHubDescription}
           techlist={gameHubTech}
           iconSize={iconSize}
+          href="https://alfredhm-gamehub.vercel.app/"
+          github="https://github.com/alfredhm/GamehubTutorial"
         />
         <br></br>
       </section>

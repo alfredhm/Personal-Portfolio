@@ -8,6 +8,8 @@ interface Props {
   description: string;
   techlist: string[];
   iconSize: number;
+  href: string;
+  github: string;
 }
 
 const RightProject = ({
@@ -16,6 +18,8 @@ const RightProject = ({
   description,
   techlist,
   iconSize,
+  href,
+  github,
 }: Props) => {
   const [hover, setHover] = useState(false);
 
@@ -38,10 +42,10 @@ const RightProject = ({
               ))}
             </ul>
             <div className="project-links flex-start">
-              <a target="_blank" href="https://github.com/alfredhm/Slither">
+              <a target="_blank" href={github}>
                 <RiGithubLine size={iconSize} />
               </a>
-              <a target="_blank" href="https://alfredhm.pythonanywhere.com/">
+              <a target="_blank" href={href}>
                 <BiLink size={iconSize} />
               </a>
             </div>
@@ -49,7 +53,7 @@ const RightProject = ({
         </div>
       </div>
       <div className="project-image-div-flipped">
-        <a target="_blank" href="https://alfredhm.pythonanywhere.com/">
+        <a target="_blank" href={href}>
           <div
             style={
               hover

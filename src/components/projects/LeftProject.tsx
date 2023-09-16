@@ -8,6 +8,8 @@ interface Props {
   description: string;
   techlist: string[];
   iconSize: number;
+  href: string;
+  github: string;
 }
 
 const LeftProject = ({
@@ -16,13 +18,15 @@ const LeftProject = ({
   description,
   techlist,
   iconSize,
+  href,
+  github,
 }: Props) => {
   const [hover, setHover] = useState(false);
 
   return (
     <div className="project-div-left">
       <div className="project-image-div">
-        <a target="_blank" href="https://alfredhm-weather.vercel.app/">
+        <a target="_blank" href={href}>
           <div
             style={
               hover
@@ -53,10 +57,10 @@ const LeftProject = ({
               ))}
             </ul>
             <div className="project-links">
-              <a target="_blank" href="https://github.com/alfredhm/Weather">
+              <a target="_blank" href={github}>
                 <RiGithubLine size={iconSize} />
               </a>
-              <a target="_blank" href="https://alfredhm-weather.vercel.app/">
+              <a target="_blank" href={href}>
                 <BiLink size={iconSize} />
               </a>
             </div>
