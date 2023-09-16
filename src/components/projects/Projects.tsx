@@ -10,7 +10,7 @@ interface Props {
 
 const weatherDescription =
   "A simple, elegant weather app with current, hourly, and daily data as well as moving backgrounds based on condition and an image based on location.";
-const weatherTech = ["React", "Tailwind", "oogle API", "OpenWeather API"];
+const weatherTech = ["React", "Tailwind", "Google API", "OpenWeather API"];
 
 const slitherDescription =
   "A twitter-esque network app that allows users to post hisses, like hisses, change their profile information, edit hisses, and follow other users.";
