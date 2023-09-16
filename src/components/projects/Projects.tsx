@@ -25,7 +25,7 @@ const Projects = ({ iconSize }: Props) => {
     <>
       <section id="projects">
         <div className="title-div">
-          <h1>Projects</h1>
+          <h2>Projects</h2>
           <hr></hr>
         </div>
         <LeftProject
