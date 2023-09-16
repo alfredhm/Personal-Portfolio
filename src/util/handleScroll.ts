@@ -14,7 +14,7 @@ export default function handleScroll() {
             nav?.classList.remove("hidden")
         }
 
-        if (window.scrollY === 0) {
+        if (window.scrollY < 30) {
             nav?.classList.add("shadow-out")
             nav?.classList.add("no-shadow")
         } else {

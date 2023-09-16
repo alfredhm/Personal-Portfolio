@@ -8,7 +8,7 @@ const Experience = ({ screenWidth }: Props) => {
   return (
     <section id="experience">
       <div className="title-div">
-        <h2>Experience</h2>
+        <h1>Experience</h1>
         <hr></hr>
       </div>
       <div className="experience-div">

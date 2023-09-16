@@ -402,6 +402,7 @@ body {
                 justify-items: flex-start;
                 align-items: center;
                 max-height: 400px;
+                margin-top: 20px;
 
                 @media (max-width: 930px) {
                     max-width: 450px;
@@ -1145,6 +1146,7 @@ body {
                 height: 3rem;
                 padding-top: 0.7rem;
                 overflow: hidden;
+                max-height: 300px;;
             }
 
             .contact-flex {

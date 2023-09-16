@@ -91,7 +91,7 @@ const Contact = ({ iconSize, screenWidth }: Props) => {
   return (
     <section id="contact">
       <div className="title-div">
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <hr></hr>
       </div>
       <hr></hr>
