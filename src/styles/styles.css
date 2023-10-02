@@ -1111,14 +1111,14 @@ body #contact form ::placeholder:focus {
 body #contact form :focus {
   outline: none;
 }
+body #contact form input {
+  border-radius: 0px;
+}
 @media (max-width: 700px) {
   body #contact form input {
     height: 40px !important;
     min-height: auto !important;
   }
-}
-body #contact form .input-body {
-  border-radius: 0px;
 }
 @media (max-width: 700px) {
   body #contact form .input-body {
