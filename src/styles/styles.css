@@ -1135,6 +1135,7 @@ body #contact form input, body #contact form textarea {
   min-height: 50px;
   color: #a4b5c0;
   font-weight: bold;
+  border-radius: 0px;
 }
 body #contact form input:focus, body #contact form textarea:focus {
   border-color: #a4b5c0;
