@@ -16,10 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div
-      onScroll={screenSize.width > 850 ? handleScroll : () => {}}
-      onTouchMove={screenSize.width > 850 ? handleScroll : () => {}}
-    >
+    <div onScroll={handleScroll} onTouchMove={handleScroll}>
       {screenSize.width > 850 ? <NavBar /> : <NavMenu />}
       <Body
         screenWidth={screenSize.width}
