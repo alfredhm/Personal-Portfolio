@@ -32,7 +32,7 @@ const About = () => {
       <div className="about-flex">
         <div className="about-text">
           <p>
-            Hello, my name is Alfred Morgan and I'm a 19-year-old enthusiastic
+            Hello, my name is Alfred Morgan and I'm a 20-year-old enthusiastic
             full stack developer. I've been on an exhilarating coding journey
             since the pandemic hit. My path to programming was sparked by an
             encounter with the Harvard CS50 course, and I haven't looked back
